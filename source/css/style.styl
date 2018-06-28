@@ -1,0 +1,58 @@
+// utils
+@import "_utils/reset.css"
+@import "_utils/font-awesome.min.css"
+@import "_utils/_variables"
+@import "_utils/animation"
+// highlight css
+@import "_code/index"
+
+// pages css
+@import "_page/tags"
+@import "_page/archive"
+@import "_page/categories"
+@import "_page/about"
+@import "_page/postlist"
+
+// components css
+@import "_partial/paginator"
+@import "_partial/header"
+@import "_partial/sidebar"
+@import "_partial/background"
+@import "_partial/footer"
+
+.main{
+  margin: 0 auto;
+  padding-top: 3.5rem;
+  width: 800px;
+  min-height: calc( 100% - 6.5rem );
+  @media (max-width 800px) {
+    width: 100%;
+    display: block;
+    background: #fff;
+    background: rgba(255,255,255,0.8);
+  }
+  .side-wrapper {
+    padding: 0 10px 0 0;
+    width: 190px;
+    @media (max-width 800px) {
+      display: none;
+    }
+
+  }
+  .list-wrapper {
+    width: 100%;
+    overflow: hidden;
+    @media (min-width 800px) {
+      min-height: calc(100vh - 6.5rem);
+      margin-left: 200px;
+      width: 600px;
+      background: #fff;
+      background: rgba(255,255,255,0.8);
+    }
+    .post-list-wrapper {
+      margin: 0 .5rem;
+    }
+  }
+}
+
+

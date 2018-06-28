@@ -1,0 +1,30 @@
+<section class="archive-wrapper">
+    <h4 class="title"><i class="fa fa-archive"></i> archive</h4>
+    <div class="archive-list">
+        <% const groups = {};
+        const years = [];
+        page.posts.each(post => {
+            const year = post.date.year();
+            if (typeof(groups[year]) === 'undefined') {
+                groups[year] = [];
+                years.push(year);
+            }
+            groups[year].push(post);
+        });
+        years.sort((a, b) => b - a); %>
+        <% for (let year of years) { %>
+        <h4 class="mate" id="<%= year %>"><%= year %></h4>
+        <div class="articles">
+            <% for (let post of groups[year].sort((a, b) => b.date.diff(a.date))) { %>
+            <a href="<%= url_for(post.link ? post.link : post.path) %>">
+                <div class="article">
+                    <div class="time" datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, 'MM-DD') %></div>
+                    <%= post.title %>
+                </div>
+            </a>
+            <% } %>
+        </div>
+        <% } %>
+    </div>
+    <%- partial('_partial/paginator') %>
+</section>

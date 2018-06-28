@@ -1,0 +1,13 @@
+<section class="tags-wrapper">
+    <% if( site.tags &&  site.tags.length > 0 ) {%>
+    <h4 class="title"><i class="fa fa-tags"></i> tag</h4>
+    <div class="tag-list">
+        <%- list_tags( site.tags ,{
+            show_count:false,
+            style:'none',
+            separator:" "
+        }) %>
+    </div>
+    <% }%>
+</section>
+<%- partial('_partial/paginator') %>

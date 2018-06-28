@@ -1,0 +1,74 @@
+# 版本
+version: 1.0.0
+
+# 创建时间
+copyrightYear: 2018
+
+# 头像
+author: /img/favicon.ico
+
+# 菜单
+menu:
+  Home: /
+  Archives: /archives
+  Categories: /categories
+  Tags: /tags
+  About: /about
+rss: /atom.xml
+
+# 菜单图标
+menuIcon:
+  Home: home
+  Archives:  archive
+  Categories: file
+  Tags: tags
+  About: user-circle
+
+# 轮播背景
+backgroundItems:
+  item1: /img/timg.jpg
+  item2: /img/timg1.jpg
+  item3: /img/timg2.jpg
+  item4: /img/timg3.jpg
+  item5: /img/timg4.jpg
+  item6: /img/timg5.jpg
+
+# sub nav
+subnav:
+  github: https://github.com/
+  twitter: https://twitter.com/
+  weibo: http://weibo.com/
+  envelope: mailto:yanhao@minicart.cn
+  qq: tencent://message/?uin=616825502&Site=&Menu=yes
+
+# links
+links:
+  link_1:
+    name: JavaScript - 开源中国
+    url: https://www.oschina.net/question/tag/javascript
+  link_2:
+    name: vue - 官方论坛
+    url: https://forum.vuejs.org/
+  link_3:
+    name: CNode中文社区
+    url: https://cnodejs.org/
+  link_4:
+    name: 阮一峰的网络日志
+    url: http://www.ruanyifeng.com/blog/
+  link_5:
+    name: Java - 开源中国社区
+    url: https://www.oschina.net/question/tag/java/
+  link_6:
+    name: Java EE - 推酷
+    url: https://www.tuicool.com/topics/11000074
+
+# 评论
+valine:
+  enable: true
+  appid:  xnMpLFXoJuioy0Tj4pkIeCP6-gzGzoHsz
+  appkey: zHo0sa30AXpP7Q8mVqTJwSse
+  notify: false
+  verify: false
+  placeholder: ヾﾉ≧∀≦)o来啊，快活啊!
+  guest_info: nick,mail,link
+  pageSize: 10

@@ -1,0 +1,11 @@
+<section class="categories-wrapper">
+    <h4 class="title"><i class="fa fa-bars"></i> category</h4>
+    <% if( site.categories &&  site.categories.length > 0 ) {%>
+    <%- list_categories( site.categories ,{
+        show_count:false,
+        style:'list',
+        separator:" "
+    }) %>
+    <% }%>
+    <%- partial('_partial/paginator') %>
+</section>

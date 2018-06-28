@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <%- partial('_partial/head') %>
+    <body>
+        <div class="main-wrapper">
+            <%- partial('_partial/header', {cache: true}) %>
+            <main class="main clearfix">
+                <div class="side-wrapper"><%- partial('_partial/sidebar') %></div>
+                <div class="list-wrapper">
+                    <%- body %>
+                </div>
+            </main>
+            <%- partial('_partial/footer') %>
+        </div>
+        <%- partial('_partial/background')%>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+<section class="post-list-wrapper">
+    <div>
+        <% page.posts.each(function (post) { %>
+        <%- partial('common/article', { post: post, index: true }) %>
+        <% }) %>
+    </div>
+    <%- partial('_partial/paginator') %>
+</section>
+

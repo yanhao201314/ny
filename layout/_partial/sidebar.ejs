@@ -1,0 +1,58 @@
+
+<div class="max-sidebar-wrapper">
+    <aside>
+        <div class="sidebar-widget">
+            <div class="sidebar-header-title">
+                <div class="a-0-5s bounceInDown"><%= config.author %>'blog</div>
+            </div>
+            <div class="sidebar-inner a-1s bounceInUp">
+                <section>
+                    <div>
+                        <div>
+                            <img class="author-image" src="<%=theme.author%>" alt="">
+                            <p class="author-name"><%= config.author %></p>
+                            <p class="description">Designer</p>
+                        </div>
+                        <nav class="state">
+                            <div class="state-item">
+                                <a href="/archives/">
+                                    <span class="count"><%= site.posts.length %></span>
+                                    <span class="name">文章</span>
+                                </a>
+                            </div>
+                            <div class="state-item">
+                                <a href="/categories">
+                                    <span class="count"><%= site.categories.length %></span>
+                                    <span class="name">分类</span>
+                                </a>
+                            </div>
+                            <div class="state-item">
+                                <a href="/tags">
+                                    <span class="count"><%= site.tags.length %></span>
+                                    <span class="name">标签</span>
+                                </a>
+                            </div>
+                        </nav>
+                        <div class="widget-socials">
+                            <% for (name in theme.subnav){%>
+                            <a href="<%- url_for(theme.subnav[name]) %>"><i class="fa fa-<%= name %>"></i></a>
+                            <%}%>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </aside>
+    <aside>
+        <div class="sidebar-widget" style="min-height: 60vh;margin-top: .5rem;">
+                <div class="widget-container  a-2s bounceInUp">
+                    <ul>
+                        <% for (item in theme.links) {%>
+                        <li><a href="<%= theme.links[item].url %>"><i class="fa fa-link"></i> <%= theme.links[item].name %></a></li>
+                        <%}%>
+                    </ul>
+                </div>
+        </div>
+    </aside>
+    <div class="sidebar-footer"></div>
+</div>

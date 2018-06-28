@@ -1,0 +1,40 @@
+<%
+function is_same_link(a, b) {
+    function santize(url) {
+        let paths = url.replace(/(^\w+:|^)\/\//, '').split('#')[0].split('/');
+        if (paths.length > 0 && paths[paths.length - 1].trim() === 'index.html') {
+            paths = paths.slice(0, paths.length - 1)
+        }
+        return paths.join("");
+    }
+    return santize(a) === santize(b);
+};
+%>
+<header class="nav-wrapper">
+    <div class="min">
+        <a href="javascript: _menu()" class="min-menu-btn"><i class="fa fa-align-left"></i> menu</a>
+        <ul class="sub-nav-wrapper">
+            <% for (name in theme.menu) { %>
+            <li>
+                <a class="" href="<%- url_for(theme.menu[name]) %>">
+                    <i class="fa fa-<%= theme.menuIcon[name] %>"></i>
+                    <%- __(name) %>
+                </a>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+    <div class="max">
+        <div class="headband"></div>
+        <ul>
+            <% for (name in theme.menu) { %>
+            <li>
+                <a class="<% if (typeof(page.path) !== 'undefined' && is_same_link(theme.menu[name], page.path)) { %>is-active<% } %>" href="<%- url_for(theme.menu[name]) %>">
+                    <i class="fa fa-<%= theme.menuIcon[name] %>"></i>
+                    <%- __(name) %>
+                </a>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</header>

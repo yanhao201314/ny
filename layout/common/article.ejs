@@ -1,0 +1,24 @@
+<article class="blog-post a-2s bounceInUp">
+    <div class="blog-post-body">
+        <h3 class="title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3>
+        <%if(post.tags && post.tags.length){%>
+        <div class="post-meta">
+            <i class="fa fa-tags"></i>
+            <% post.tags.sort('date',-1).each(function (tag){%>
+            <span><a href="<%- url_for(tag.path) %>"><%- tag.name %></a> </span>
+            <% })%>
+        </div>
+        <%}%>
+        <% if(index) { %>
+            <div class="blog-content"><%- post.excerpt %></div>
+            <div class="read-more"><a href="<%- url_for(post.path) %>">More</a></div>
+        <% } else {%>
+            <div class="blog-content"><%- page.content %></div>
+        <% } %>
+    </div>
+    <% if(!index) { %>
+        <div class="comment-outer-wrapper">
+            <%- partial('valine')%>
+        </div>
+    <% } %>
+</article>

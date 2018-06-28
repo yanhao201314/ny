@@ -1,0 +1,57 @@
+.highlight{
+  position: relative;
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 1rem 0;
+  margin: .5rem 0;
+  overflow-x: auto;
+  text-align: justify;
+  ::-webkit-scrollbar-thumb{
+    height: 1rem;
+    background-color: rgb(57,197,187);
+    background-color: rgba(57,197,187,0.7);
+  }
+  table {position: relative;}
+  pre * {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+  }
+  .gutter{
+    width: 10px;
+    color: #49545f;
+    border-right: 1px solid rgba(#49545f, .1);
+    pre {padding: .5rem;}
+  }
+  .code{
+    color: inherit;
+    pre {padding: .5rem;}
+    .comment {font-size: 14px;}
+    .comment, .quote {color: $color-code-comment;}
+    .keyword, .selector-tag, .addition {color: $color-code-keyword;}
+    .number, .string, .meta .meta-string, .literal, .doctag, .regexp {
+      color $color-code-number;
+    }
+    .title, .section, .name, .selector-id, .selector-class{      color: $color-code-title;}
+    .attribute, .attr, .variable, .template-variable, .class .title, .type{color: $color-code-attribute;}
+    .symbol, .bullet, .subst, .meta, .meta .keyword, .selector-attr, .selector-pseudo, .link{color: $color-code-symbol;}
+    .built_in, .deletion {color: $color-code-builtIn;}
+    .params {color: $color-code-params;}
+  }
+  .line {
+    height: 2rem;
+    color: #49545f;
+  }
+  tr, td {    margin: .5rem;}
+}
+.highlight.bash:after {
+  content: "BASH";
+  font-size: .6rem;
+  font-weight: 100;
+  color: #a6a6a6;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: .5rem;
+}
+
+
+

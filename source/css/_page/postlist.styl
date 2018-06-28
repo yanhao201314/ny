@@ -1,0 +1,111 @@
+.blog-post {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #CECECE;
+  text-align: center;
+  :last-child {
+    border-bottom: none;
+  }
+  .blog-post-body {
+    padding: 1rem 0.5rem;
+    .title {
+      margin: 0;
+      line-height: 2rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+    p {
+      font-size: .9rem;
+      font-weight: 300;
+      line-height: 1.5rem;
+      color: #000;
+    }
+    a {
+      color: #4A4A4A;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+      :hover  {
+        color: #dddddd;
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  .post-meta {
+    margin: .5rem 0 1.5rem;
+    font-weight: 100;
+    font-size: .9rem;
+    color: #ee404a;
+    font-family: "Lora";
+    font-style: italic;
+    a {
+      display: inline-block;
+      padding: 0 .5rem;
+      color: #fff;
+      background: #ee404a;
+    }
+    span {
+      :first-child {
+      }
+    }
+    i {
+      padding-right: 5px;
+      font-size: .8rem;
+    }
+  }
+  .read-more  {
+    a {
+      color: #fff;
+      display: inline-block;
+      padding: .5rem 1rem;
+      margin: 1rem 0 0px;
+      border: 1px solid;
+      border-radius: 5px;
+      background-color: #5c5c5c;
+      font-family: "Open Sans", Sans-serif;
+      font-weight: 400;
+      font-size: .9rem;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+      :hover {
+        background-color: #fed136;
+        border-color: #fed136;
+        color: #fff;
+      }
+    }
+  }
+  .blog-post-text {
+    text-align: left;
+    p {
+      text-align: justify;
+      font-size: .9rem;
+      font-weight: 400;
+      line-height: 28px;
+      color: #000;
+      letter-spacing: 0.1px;
+      margin-bottom: 30px;
+    }
+  }
+  .blog-content {
+    text-align: left;
+    margin: 0 .5rem;
+    h3 {
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin: .5rem 0;
+    }
+  }
+  .comment-outer-wrapper {
+    padding: 1rem;
+    text-align: center;
+    background: #fff;
+    background: rgba(255,255,255,0.8);
+  }
+}
